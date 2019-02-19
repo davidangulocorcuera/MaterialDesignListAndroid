@@ -3,14 +3,17 @@ package com.example.davidangulo.beautifulllist.fragments
 import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
+import android.support.v7.widget.*
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.davidangulo.beautifulllist.R
 import com.example.davidangulo.beautifulllist.adapters.BeautifullListAdapter
 import com.example.davidangulo.beautifulllist.model.Card
+import android.widget.GridLayout.HORIZONTAL
+import android.support.v7.widget.DividerItemDecoration
+
+
 
 
 class BeautifullListFragment : Fragment() {
@@ -26,12 +29,20 @@ class BeautifullListFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_beautifull_list, container, false).apply {
             findViewById<RecyclerView>(R.id.recyclerView_beautifull_list).apply {
-                layoutManager = GridLayoutManager(this.context, 1)
+                layoutManager = LinearLayoutManager(this.context)
                 cards.addAll(
                     arrayOf(
-                        // Añadimos las cards
+                        Card("Example Title","This is a example of cell",1),
+                        Card("Example Title","This is a example of cell",1)
                     )
                 )
+                this.addItemDecoration(
+                    DividerItemDecoration(
+                        this.context,
+                        DividerItemDecoration.VERTICAL
+                    )
+                )
+
                 adapter = BeautifullListAdapter(cards, mListItemListener)
 
             }
