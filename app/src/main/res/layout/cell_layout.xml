@@ -2,13 +2,62 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
-    <TextView android:layout_width="match_parent"
-              android:layout_height="100dp"
-              android:text=""
-              android:id="@+id/name_text"
-              android:gravity="center"
-              android:textStyle="bold"
-    />
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="15dp"
+>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_gravity="center"
+    >
+        <ImageView android:layout_width="90dp"
+                   android:layout_height="60dp"
+                   android:id="@+id/imageView_cellImage"
+                   android:src="@drawable/beef"
+                   android:scaleType="fitXY"
+                   android:layout_gravity="center"
+                   android:contentDescription="@string/cellimage_description"/>
+        <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:orientation="vertical"
+        >
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorPrimaryText"
+                      android:textSize="20sp"
+                      android:text="@string/title"
+                      android:layout_marginStart="20dp"
+                      android:gravity="center_vertical"
+                      android:id="@+id/textView_title"
+            />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textColor="@color/colorSecondaryText"
+                      android:textSize="17sp"
+                      android:text="@string/description"
+                      android:layout_marginStart="20dp"
+                      android:id="@+id/textViewDescription"
+
+            />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_marginEnd="15dp"
+                  android:textColor="@color/colorSecondaryText"
+                  android:textSize="17sp"
+                  android:text="01"
+                  android:id="@+id/textView_counter"
+                  android:textAlignment="textEnd"
+
+        />
+    </LinearLayout>
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="120dp"
+            android:background="@color/colorDivider"/>
 
 </LinearLayout>

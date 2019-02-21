@@ -1,4 +1,4 @@
-package com.example.davidangulo.beautifulllist
+package com.example.davidangulo.beautifullist
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">BeautifullList</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Beautiful List</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="cellimage_description">cellImage</string>
+    <string name="title_list">Title</string>
 </resources>
